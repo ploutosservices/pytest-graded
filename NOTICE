@@ -1,0 +1,5 @@
+pytest-graded
+Copyright 2026 Ploutos Services LLC
+
+This product includes software developed at Ploutos Services LLC.
+It depends on pytest (MIT licence), which is not bundled.

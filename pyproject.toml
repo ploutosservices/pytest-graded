@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytest-graded"
+version = "0.1.0"
+description = "Run each test script as one pytest item, and fail a script that graded nothing"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+dependencies = ["pytest>=7"]
+classifiers = ["Framework :: Pytest", "License :: OSI Approved :: Apache Software License"]
+
+[project.urls]
+Source = "https://github.com/ploutosservices/pytest-graded"
+Issues = "https://github.com/ploutosservices/pytest-graded/issues"
+
+[project.entry-points.pytest11]
+graded = "pytest_graded"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+graded_files = "no-graded-scripts-in-this-repository"
